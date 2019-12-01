@@ -1,0 +1,29 @@
+{
+  "name": "ocr-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "deploy": "cd ../ && git subtree push --prefix coscheck-backend coscheck master",
+    "dev": "NODE_ENV=development nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.16.4",
+    "express-fileupload": "^1.1.6",
+    "helmet": "^3.15.0",
+    "lodash": "^4.17.15",
+    "morgan": "^1.9.1",
+    "node-tesseract-ocr": "^1.0.0",
+    "ocr-space-api": "^1.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}

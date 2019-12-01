@@ -1,0 +1,33 @@
+node index.js https://www.ewg.org/skindeep/browse/ingredients/705921SILICA_SILYLATE?category=foundation&id=705921SILICA_SILYLATE&per_page=36 2 good1.csv
+node index.js https://www.ewg.org/skindeep/browse/ingredients/706945WATER?category=mask&id=706945WATER&per_page=36 3 good2.csv
+node index.js https://www.ewg.org/skindeep/browse/ingredients/702620GLYCERIN?category=facial+cleanser&id=702620GLYCERIN&per_page=36 3 good3.csv
+node index.js https://www.ewg.org/skindeep/browse/ingredients/706945WATER?category=bar+soap&id=706945WATER&per_page=24 4 good4.csv
+
+node index.js https://www.ewg.org/skindeep/browse/ingredients/702512-FRAGRANCE?sort=reverse-score&id=702512-FRAGRANCE&per_page=36 8 high1.csv
+node index.js https://www.ewg.org/skindeep/browse/ingredients/704372OXYBENZONE?category=moisturizer+with+SPF&page=1&per_page=36&sort=reverse-score 1 high2.csv
+node index.js https://www.ewg.org/skindeep/browse/ingredients/705545RETINYL_PALMITATE_VITAMIN_A_PALMITATE?category=foundation&sort=reverse-score&id=705545RETINYL_PALMITATE_VITAMIN_A_PALMITATE&per_page=36 2 high3.csv
+
+node index.js https://www.ewg.org/skindeep/browse/ingredients/701741CYCLOPENTASILOXANE?category=lipstick&page=2&per_page=36&sort=reverse-score 1 moderate1.csv
+node index.js https://www.ewg.org/skindeep/browse/ingredients/706569TOCOPHERYL_ACETATE?category=conditioner&sort=reverse-score&id=706569TOCOPHERYL_ACETATE&per_page=24 1 moderate2.csv
+node index.js https://www.ewg.org/skindeep/browse/ingredients/704786PETROLATUM?category=lipstick&id=704786PETROLATUM&per_page=36 2 moderate3.csv
+node index.js https://www.ewg.org/skindeep/browse/ingredients/702867HOMOSALATE?category=moisturizer+with+SPF&page=2&per_page=24 2 moderate4.csv
+node index.js https://www.ewg.org/skindeep/browse/ingredients/706945WATER?category=facial+cleanser&page=9&per_page=24 4 moderate5.csv
+node index.js https://www.ewg.org/skindeep/browse/ingredients/706945WATER?category=serums+%26+essences&page=9&per_page=24 4 moderate6.csv
+
+
+node index.js https://www.ewg.org/skindeep/browse/ingredients/702620GLYCERIN?category=facial+moisturizer%2Ftreatment&page=1&per_page=36 8 good6.csv
+node index.js https://www.ewg.org/skindeep/browse/ingredients/706410IRON_OXIDES?category=lipstick&page=17&per_page=36 17 good7.csv
+node index.js https://www.ewg.org/skindeep/browse/ewg_verified?page=1&per_page=36&sort=reverse-alphabetical 10 good8.csv
+node index.js https://www.ewg.org/skindeep/browse/ewg_verified?page=10&per_page=36&sort=reverse-alphabetical 10 good9.csv
+node index.js https://www.ewg.org/skindeep/browse/ewg_verified?page=20&per_page=36&sort=reverse-alphabetical 10 good10.csv
+node index.js https://www.ewg.org/skindeep/browse/ewg_verified?page=30&per_page=36&sort=reverse-alphabetical 10 good11.csv
+node index.js https://www.ewg.org/skindeep/browse/ewg_verified?page=40&per_page=36&sort=reverse-alphabetical 5 good12.csv
+
+node index.js https://www.ewg.org/skindeep/browse/ingredients/702620GLYCERIN?category=facial+moisturizer%2Ftreatment&page=10&per_page=36 4 moderate7.csv
+node index.js https://www.ewg.org/skindeep/browse/ingredients/706410IRON_OXIDES?category=lipstick&page=19&per_page=36 20 moderate8.csv
+node index.js https://www.ewg.org/skindeep/browse/category/Nail_polish?sort=reverse-score&id=Nail_polish&per_page=24 1 moderate9.csv
+node index.js https://www.ewg.org/skindeep/browse/category/Concealer?page=1&per_page=36&sort=reverse-score 6 moderate10.csv
+
+node index.js https://www.ewg.org/skindeep/browse/category/Facial_powder?sort=reverse-score&id=Facial_powder&per_page=24 1 high4.csv
+node index.js https://www.ewg.org/skindeep/browse/ingredients/701383CITRAL?category=fragrance+for+women&sort=reverse-score&id=701383CITRAL&per_page=36 1 high5.csv
+node index.js https://www.ewg.org/skindeep/browse/category/Depilatory?sort=reverse-score&id=Depilatory&per_page=36 1 high6.csv

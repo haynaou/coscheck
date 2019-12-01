@@ -1,0 +1,23 @@
+{
+  "name": "ewg-scraper",
+  "version": "1.0.0",
+  "description": "Cosmetic products scraper from ewg.org .",
+  "author": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cheerio",
+    "axios",
+    "nodejs",
+    "scrape"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "chalk": "^2.4.1",
+    "cheerio": "^1.0.0-rc.2",
+    "fast-csv": "^3.4.0"
+  }
+}

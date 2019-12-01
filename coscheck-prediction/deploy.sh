@@ -1,0 +1,1 @@
+cd ../ && git subtree push --prefix coscheck-prediction coscheck2 master

@@ -20,7 +20,7 @@ const API_BASE_URL = isProd ? "https://coscheck.herokuapp.com" : "http://localho
 const PREDICTION_API_BASE_URL = isProd ? "https://coscheck-prediction.herokuapp.com" : "http://localhost:5001";
 const MAX_SIZE = 5 * 1024 * 1024; // 5mb
 
-console.info('Using env', process.env)
+console.info('env', process.env)
 
 class App extends Component {
   state = {
@@ -397,7 +397,6 @@ class App extends Component {
 
   renderPrediction = () => {
     const { prediction, error } = this.state;
-    console.log("Prediction = ", prediction);
     let text = null;
     let chartPercent = null;
     if (error) {

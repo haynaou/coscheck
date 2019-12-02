@@ -5,7 +5,9 @@ const chalk = require('chalk')
 const csv = require('fast-csv');
 const ROOT_URL = "https://www.ewg.org";
 
+// Command line arguments
 const args = process.argv.slice(2);
+
 if (args.length < 3) {
   console.log(chalk.yellow(`
   Usage:
@@ -16,6 +18,7 @@ if (args.length < 3) {
   - num_pages     : number of pages to scrape.
   - output_file   : the file name where to save the result as csv.
   `));
+  
   process.exit(1)
 };
 
@@ -23,6 +26,7 @@ const catalogueUrl = args[0];
 const numPages = parseInt(args[1], 10);
 const outputFile = args[2];
 
+// Print the command line arguments passed to the script.
 console.log(
   chalk.gray(`
 ================================================
@@ -38,7 +42,9 @@ const getProductsUrls = (catalogueUrl, productsUrls = []) => {
     const $ = cheerio.load(response.data);
 
     const listings = $("section.product-listings");
-    console.log(chalk.yellow(`  Scraping ${listings.children().length} products`));
+    console.log(
+      chalk.yellow(`  Scraping ${listings.children().length} products`)
+    );
 
     listings.children().each((i, el) => {
       const productUrl = $(el).find(".product-tile a").attr("href");
@@ -47,25 +53,41 @@ const getProductsUrls = (catalogueUrl, productsUrls = []) => {
       }
     });
 
-    const nextPageUrl = $("a.next_page").attr('href');
-    return `${ROOT_URL}/${nextPageUrl}`;
+    const path = $("a.next_page").attr('href');
+    const nextPageUrl = `${ROOT_URL}/${path}`;
+    return nextPageUrl;
   });
 }
 
-const getProductUrlsFromCatalogue = (catalogueUrl, maxPages, productsUrls = [], scrappedPagesCount = 0) => {
+const getProductUrlsFromCatalogue = (
+  catalogueUrl, 
+  maxPages, 
+  productsUrls = [], 
+  scrapedPagesCount = 0) => {
+  
   console.log(
     chalk.cyan(`\nScraping catalogue: ${chalk.underline.bold(catalogueUrl)}`)
   );
-  scrappedPagesCount++;
-  return getProductsUrls(catalogueUrl, productsUrls).then(nextPageUrl => {
-    if (scrappedPagesCount >= maxPages) return;
-    console.log(chalk.yellow(`  Scraping page ${scrappedPagesCount+1}`));
-    return getProductUrlsFromCatalogue(nextPageUrl, maxPages, productsUrls, scrappedPagesCount);
-  });
+  scrapedPagesCount++;
+  
+  return getProductsUrls(catalogueUrl, productsUrls)
+    .then((nextPageUrl) => {
+      // Stop if we reached the max pages to be scraped.
+      if (scrapedPagesCount >= maxPages) return;
+    
+      // Scrape next page.
+      console.log(chalk.yellow(`  Scraping page ${scrapedPagesCount+1}`));
+      return getProductUrlsFromCatalogue(
+        nextPageUrl,
+        maxPages,
+        productsUrls,
+        scrapedPagesCount
+      );
+    });
 };
 
 // convert breaklines and extra whitespace to single whitespace
-// remove whitespace at the begining and the end
+// and remove whitespace from the begining and the end.
 const trimSpace = (str = '') => (
   str
     .replace(/  +|[\r\n\x0B\x0C\u0085\u2028\u2029]+/g, " ")
@@ -73,7 +95,10 @@ const trimSpace = (str = '') => (
 )
 
 const getAllProductsDetails = (productUrls = []) => {
-  console.log(chalk.cyan(`\nScraping product details for ${productsUrls.length} products`));
+  console.log(
+    chalk.cyan(`\nScraping product details for ${productsUrls.length} products`)
+  );
+  
   const promises = productUrls.map(productUrl => getProductDetails(productUrl));
   return Promise.all(promises);
 }
@@ -84,16 +109,19 @@ const getProductDetails = (productUrl) => {
 
     // Name of the product
     const nameNode = $("#product .product-name");
+    
     // Product score parsed from the score svg icon url.
     const scoreUrl = $("#product .product-score img").attr("src") || '';
     const scoreStartIndex = scoreUrl.indexOf("/score-");
+    const scoreNumber = parseInt(scoreUrl.slice(scoreStartIndex + 7, scoreStartIndex + 9), 10);
+    
     // Product ingredients
     const ingredientsNode = $('#label-information h3:contains("Ingredients from packaging:")').next();
 
     return {
       name: nameNode.text(),
-      score: scoreStartIndex > 0 ? parseInt(scoreUrl.slice(scoreStartIndex + 7, scoreStartIndex + 9), 10) : 1,
-      ingredients: trimSpace((ingredientsNode.text() || ''))
+      score: scoreStartIndex > 0 ? scoreNumber : 1,
+      ingredients: trimSpace(ingredientsNode.text() || '')
     };
   });
 }
@@ -101,13 +129,15 @@ const getProductDetails = (productUrl) => {
 const productsUrls = [];
 getProductUrlsFromCatalogue(catalogueUrl, numPages, productsUrls)
   .then(() => {
-    return getAllProductsDetails(productsUrls).then(productDetails => {
-      console.log(chalk.cyan(`Saving ${productsUrls.length} products to ${outputFile}.`));
-      csv.writeToPath(outputFile, productDetails, { headers: true });
-    });
+    return getAllProductsDetails(productsUrls)
+      .then((productDetails) => {
+        console.log(chalk.cyan(`Saving ${productsUrls.length} products to ${outputFile}.`));
+        csv.writeToPath(outputFile, productDetails, { headers: true });
+      });
   })
   .catch(error => {
     console.log(chalk.red(`${error}`));
+  
     if (error.response) {
       console.log(chalk.red(`
 response status: ${error.response.status}

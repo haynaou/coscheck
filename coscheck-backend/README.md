@@ -1,5 +1,5 @@
 # coscheck-backend
-Backend server that performs the OCR of the image passed as a POST request.
+Backend server that performs the OCR on the image passed-in as a POST request.
 
 ## Requirements
 - [nodejs](https://nodejs.org/en/)

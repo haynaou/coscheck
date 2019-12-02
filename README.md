@@ -3,7 +3,7 @@
 # Project idea
 https://coscheck.app: an app that classifies cosmetic products based on ingredients hazard concern.
 
-<img src="https://i.imgur.com/WvyWMmD.png" style="border: 1px solid black"/>
+![coscheck.app](https://i.imgur.com/tTn3V25.png)
 
 The project consist of 3 parts:
 

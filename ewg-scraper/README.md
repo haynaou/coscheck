@@ -1,5 +1,5 @@
 # ewg-scraper
-Script that scrapes the products from the [ewg.org](https://www.ewg.org/skindeep) website.
+Script that scrapes the products from the [EWG Skin Deep® Cosmetics Database](https://www.ewg.org/skindeep).
 
 ## Requirements
 - [nodejs](https://nodejs.org/en/)

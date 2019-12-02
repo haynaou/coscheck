@@ -482,8 +482,8 @@ class App extends Component {
             Cosmetic Product Classifier <span role="img">💅</span>
           </h1>
           <p className="px-10 text-center text-md lg:text-2xl w-50 text-gray-700 mb-10 lg:mb-20">
-            You don't have memorize every product ingredients anymore, <br />
-            you can use our smart guessing algorithm to know if a product is
+            You don't have to memorize every product ingredients anymore, <br />
+            you can use our smart classification algorithm to know if a product is
             harmful or not.
           </p>
 

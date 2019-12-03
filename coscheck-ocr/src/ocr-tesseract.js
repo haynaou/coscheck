@@ -19,12 +19,8 @@ const trimSpace = (str = '') => {
 const parseImage = imageFilePath => {
   return tesseract
     .recognize(imageFilePath, config)
-    .then(text => {
-      return trimSpace(text);
-    })
-    .catch(error => {
-      console.log('Error:', error.message);
-    });
+    .then(text => trimSpace(text))
+    .catch(error => console.log('Error:', error.message));
 };
 
 module.exports = {

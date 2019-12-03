@@ -9,14 +9,14 @@ import GaugeChart from 'react-gauge-chart';
 
 const ping = (url, name) => {
   const t0 = performance.now();
-  return axios.get(`${API_BASE_URL}/api`).then(() => {
+  return axios.get(`${OCR_API_BASE_URL}/api`).then(() => {
     const t1 = performance.now();
     return `${url} API ping successfull after ${parseFloat(t1 - t0).toFixed(2)}ms`;
   });
 }
 
 const isProd = process.env.NODE_ENV === 'production';
-const API_BASE_URL = isProd ? "https://coscheck.herokuapp.com" : "http://localhost:5000";
+const OCR_API_BASE_URL = isProd ? "https://coscheck.herokuapp.com" : "http://localhost:5000";
 const PREDICTION_API_BASE_URL = isProd ? "https://coscheck-prediction.herokuapp.com" : "http://localhost:5001";
 const MAX_SIZE = 5 * 1024 * 1024; // 5mb
 
@@ -38,7 +38,7 @@ class App extends Component {
 
   componentDidMount = () => {
     Promise.all([
-      ping(`${API_BASE_URL}/api`, "backend"),
+      ping(`${OCR_API_BASE_URL}/api`, "ocr"),
       ping(`${PREDICTION_API_BASE_URL}/api/predict`, "prediction")
     ])
       .then(messages => {
@@ -158,7 +158,7 @@ class App extends Component {
     fd.append("image", uploaded);
 
     axios
-      .post(`${API_BASE_URL}/api/ocr/parse-image`, fd, config)
+      .post(`${OCR_API_BASE_URL}/api/parse-image`, fd, config)
       .then(response => {
         console.log("response:", response);
         this.setState(

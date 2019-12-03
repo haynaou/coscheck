@@ -1,8 +1,8 @@
+const ocr = require("./ocr-tesseract");
+const fs = require("fs");
 const router = require("express").Router();
-const ocr = require('../lib/ocr-tesseract');
-const fs = require('fs');
 
-router.post('/parse-image', (req, res) => {
+const parseImageHandler = (req, res) => {
   if (!req.files || Object.keys(req.files).length === 0) {
     return res.status(400).json({ error: "no files were uploaded." });
   }
@@ -13,11 +13,11 @@ router.post('/parse-image', (req, res) => {
   ocr
     .parseImage(imageFile.tempFilePath)
     .then(result => {
-      console.log('parse-image result:', result);
+      console.log("parse-image result:", result);
       return res.status(200).json({ result });
     })
     .then(() => {
-      fs.unlinkSync(imageFile.tempFilePath)
+      fs.unlinkSync(imageFile.tempFilePath);
       console.log("deleted temporary file", imageFile.tempFilePath);
     })
     .catch(error => {
@@ -26,6 +26,14 @@ router.post('/parse-image', (req, res) => {
         error: `unable to parse image ${error ? error.message : error}`
       });
     });
+};
+
+router.get("/", (req, res) => {
+  res.json({
+    message: "Coscheck API - 👋"
+  });
 });
+
+router.use("/parse-image", parseImageHandler);
 
 module.exports = router;

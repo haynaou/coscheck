@@ -18,7 +18,7 @@ https://coscheck.app: an app that classifies cosmetic products based on ingredie
 
 # Table of content:
 - [ewg-scraper](https://github.com/houdaaynaou/women-in-tensorflow-hackathon/tree/master/ewg-scraper)
-- [coscheck-backend](https://github.com/houdaaynaou/women-in-tensorflow-hackathon/tree/master/coscheck-backend)
+- [coscheck-ocr](https://github.com/houdaaynaou/women-in-tensorflow-hackathon/tree/master/coscheck-ocr)
 - [coscheck-prediction](https://github.com/houdaaynaou/women-in-tensorflow-hackathon/tree/master/coscheck-prediction)
 - [coscheck-ui](https://github.com/houdaaynaou/women-in-tensorflow-hackathon/tree/master/coscheck-ui)
 

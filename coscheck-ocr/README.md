@@ -5,7 +5,7 @@ Backend server that performs the OCR on the image passed-in as a POST request.
 - [nodejs](https://nodejs.org/en/)
 
 ## Installation 
-From the `coscheck-backend` directory run the following command to install the Javascript dependencies:
+From the `coscheck-ocr` directory run the following command to install the Javascript dependencies:
 ```bash
 npm install
 ```

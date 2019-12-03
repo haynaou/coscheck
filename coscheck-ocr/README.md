@@ -1,5 +1,5 @@
 # coscheck-ocr
-Backend server that performs the OCR on the image passed-in as a POST request.
+Backend server that performs the OCR using [tesseract](https://github.com/tesseract-ocr/tesseract) on the image passed-in as a POST request.
 
 ## Requirements
 - [nodejs](https://nodejs.org/en/)

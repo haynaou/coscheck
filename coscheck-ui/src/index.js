@@ -16,7 +16,7 @@ const ping = (url, name) => {
 }
 
 const isProd = process.env.NODE_ENV === 'production';
-const OCR_API_BASE_URL = isProd ? "https://coscheck.herokuapp.com" : "http://localhost:5000";
+const OCR_API_BASE_URL = isProd ? "https://coscheck-ocr.herokuapp.com" : "http://localhost:5000";
 const PREDICTION_API_BASE_URL = isProd ? "https://coscheck-prediction.herokuapp.com" : "http://localhost:5001";
 const MAX_SIZE = 5 * 1024 * 1024; // 5mb
 

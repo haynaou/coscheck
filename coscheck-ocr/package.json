@@ -5,7 +5,7 @@
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
-    "deploy": "cd ../ && git subtree push --prefix coscheck-ocr coscheck master",
+    "deploy": "cd ../ && git subtree push --prefix coscheck-ocr coscheck1 master",
     "dev": "NODE_ENV=development nodemon src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

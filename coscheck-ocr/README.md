@@ -1,4 +1,4 @@
-# coscheck-backend
+# coscheck-ocr
 Backend server that performs the OCR on the image passed-in as a POST request.
 
 ## Requirements
@@ -19,10 +19,10 @@ npm run start
 and now the server should be running at http://localhost:5000
 
 ## Example
-Here's an example on how to call the `/api/ocr/parse-image` endpoint with the [demo.jpg](https://github.com/houdaaynaou/women-in-tensorflow-hackathon/blob/master/coscheck-backend/demo.jpg)
+Here's an example on how to call the `/api/ocr/parse-image` endpoint with the [demo.jpg](https://github.com/houdaaynaou/women-in-tensorflow-hackathon/blob/master/coscheck-ocr/demo.jpg)
 
 ```bash
-curl -X POST -F 'image=@demo.jpg' http://localhost:5000/api/ocr/parse-image
+curl -X POST -F 'image=@demo.jpg' http://localhost:5000/api/parse-image
 ```
 The command above will send an image to the server and the server will respond back with the text
 ```js

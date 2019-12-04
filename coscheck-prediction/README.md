@@ -8,7 +8,7 @@ Backend server that performs the model prediction on the text passed as a POST r
 ## Installation 
 From the `coscheck-prediction` directory run the following command to install the Python dependencies:
 ```bash
-pip install
+pip install -r requirements.txt
 ```
 
 ## Usage

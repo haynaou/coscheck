@@ -9,7 +9,7 @@ import GaugeChart from 'react-gauge-chart';
 
 const ping = (url, name) => {
   const t0 = performance.now();
-  return axios.get(`${OCR_API_BASE_URL}/api`).then(() => {
+  return axios.get(url).then(() => {
     const t1 = performance.now();
     return `${url} API ping successfull after ${parseFloat(t1 - t0).toFixed(2)}ms`;
   });

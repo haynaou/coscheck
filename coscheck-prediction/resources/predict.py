@@ -55,6 +55,7 @@ class Predict(Resource):
       return {'error': 'input text too small'}, 400
 
     prediction = predict(input_text)
+    print("input_text=", input_text)
     print("prediction=", prediction)
     return {'prediction': int(prediction)}, 201
 

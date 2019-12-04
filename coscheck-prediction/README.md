@@ -6,7 +6,7 @@ Backend server that performs the model prediction on the text passed as a POST r
 - [Tensorflow](https://www.tensorflow.org/install/pip)
 
 ## Installation 
-From the `coscheck-prediction` directory run the following command to install the Javascript dependencies:
+From the `coscheck-prediction` directory run the following command to install the Python dependencies:
 ```bash
 pip install
 ```

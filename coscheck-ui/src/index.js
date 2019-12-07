@@ -499,6 +499,10 @@ class App extends Component {
         {this.renderContent()}
 
         {this.renderActionButton()}
+
+		<div className="flex justify-center mt-20 text-gray-400">
+			Made by&nbsp;<a className="hover:font-bold" href="https://houdaaynaou.com/articles/women-in-tensorflow-hackathon/"> Houda Aynaou</a>
+		</div>
       </div>
     );
   };

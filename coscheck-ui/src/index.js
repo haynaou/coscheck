@@ -465,18 +465,6 @@ class App extends Component {
     return (
       <div className="mb-32 lg:mb-64">
         <div className="hero text-center text-gray-900">
-          {/* <div className="flex justify-between px-10 py-6 w-full">
-            <div className="font-bold tracking-wider uppercase text-lg text-pink-700">
-              Coscheck
-            </div>
-            <div className="flex items-center cursor-pointer">
-              <i
-                className="eva eva-info-outline text-lg opacity-25 text-black mr-2"
-                onClick={() => this.setState({ showModal: true })}
-              />
-              <div className="text-lg text-gray-800 hover:font-bold">About</div>
-            </div>
-          </div> */}
           <h1 className="text-3xl font-bold lg:text-6xl logo pt-10 lg:pt-40 mb-4">
             Cosmetic Product Classifier <span role="img">💅</span>
           </h1>

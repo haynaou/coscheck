@@ -58,7 +58,6 @@ class App extends Component {
 
   onDrop = (acceptedFiles, rejectedFiles) => {
     if (rejectedFiles.length) {
-      console.log("rejected files:", rejectedFiles);
       this.setState({ uploadRejected: rejectedFiles[0] });
       return;
     } else {
@@ -67,7 +66,6 @@ class App extends Component {
 
     if (acceptedFiles.length) {
       const file = acceptedFiles[0];
-      console.log("file:", file);
       file.preview = URL.createObjectURL(file);
       this.setState({
         uploaded: file
@@ -108,7 +106,6 @@ class App extends Component {
     axios
       .post(`${PREDICTION_API_BASE_URL}/api/predict`, { text }, config)
       .then(response => {
-        console.log("response:", response);
         this.setState({
           loading: false,
           prediction: _.get(response, "data.prediction", ""),
@@ -160,7 +157,6 @@ class App extends Component {
     axios
       .post(`${OCR_API_BASE_URL}/api/parse-image`, fd, config)
       .then(response => {
-        console.log("response:", response);
         this.setState(
           {
             loading: false,

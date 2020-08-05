@@ -15,7 +15,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.16.4",
-    "express-fileupload": "^1.1.6",
+    "express-fileupload": "^1.1.9",
     "helmet": "^3.15.0",
     "lodash": "^4.17.15",
     "morgan": "^1.9.1",

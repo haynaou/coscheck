@@ -1,4 +1,4 @@
-# Women In Tensorflow Hackathon Project [🔗](https://www.meetup.com/Seattle-WiDS-Meetup/events/jpsmjryzpbhc/)
+# Coscheck [🔗](https://www.meetup.com/Seattle-WiDS-Meetup/events/jpsmjryzpbhc/)
 
 
 # Project idea

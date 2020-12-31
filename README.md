@@ -18,10 +18,10 @@ https://coscheck.app: an app that classifies cosmetic products based on ingredie
 3. Model deployment
 
 # Table of content:
-- [ewg-scraper](https://github.com/houdaaynaou/women-in-tensorflow-hackathon/tree/master/ewg-scraper)
-- [coscheck-ocr](https://github.com/houdaaynaou/women-in-tensorflow-hackathon/tree/master/coscheck-ocr)
-- [coscheck-prediction](https://github.com/houdaaynaou/women-in-tensorflow-hackathon/tree/master/coscheck-prediction)
-- [coscheck-ui](https://github.com/houdaaynaou/women-in-tensorflow-hackathon/tree/master/coscheck-ui)
+- [ewg-scraper](https://github.com/houdaaynaou/coscheck/tree/master/ewg-scraper)
+- [coscheck-ocr](https://github.com/houdaaynaou/coscheck/tree/master/coscheck-ocr)
+- [coscheck-prediction](https://github.com/houdaaynaou/coscheck/tree/master/coscheck-prediction)
+- [coscheck-ui](https://github.com/houdaaynaou/coscheck/tree/master/coscheck-ui)
 
 # License
-[MIT](https://github.com/houdaaynaou/women-in-tensorflow-hackathon/blob/master/LICENSE)
+[MIT](https://github.com/houdaaynaou/coscheck/blob/master/LICENSE)

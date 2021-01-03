@@ -1,5 +1,7 @@
 # Coscheck [🔗](https://www.meetup.com/Seattle-WiDS-Meetup/events/jpsmjryzpbhc/)
 
+Read about the story and my experience building this project in my article: https://houdaaynaou.com/articles/women-in-tensorflow-hackathon/
+
 
 # Project idea
 https://coscheck.app: an app that classifies cosmetic products based on ingredients hazard concern.

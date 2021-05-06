@@ -10,7 +10,7 @@ certifi==2019.11.28
 chardet==3.0.4
 Click==7.0
 Flask==1.0.2
-Flask-Cors==3.0.8
+Flask-Cors==3.0.9
 Flask-HTTPAuth==3.3.0
 Flask-RESTful==0.3.7
 gast==0.2.2
